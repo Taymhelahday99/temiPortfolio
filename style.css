@@ -1,0 +1,305 @@
+:root {
+    --primary-color: #fbc0ca;
+    --text-color: #75858f;
+    --accent-color: #ffc107;
+    --background-color: #f6f6f6;
+    --text-color: #212529;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:"Poppin", sans-serif;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Satisfy", cursive;
+}
+.book{
+    width: 600px;
+    height:650px;
+    position: relative;
+    transition-duration: 1s;
+    perspective: 1500;
+    margin-left: 200px;
+}
+.cover, .back_cover{
+    width:100%;
+    height:100%;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 5px #fbc0ca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    background-image: url(images/fur.jpeg);
+}
+input{
+    display: none;
+}
+.cover{
+    position: absolute;
+    z-index: 6;
+    transform-origin:center left;
+    transition: transform 1s;
+}
+.cover label{
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+}
+.back_cover{
+    position: relative;
+    z-index: -1;
+}
+.page{
+    background-color: #f6f6f6 ;
+    position: absolute;
+    width: 580px;
+    height:630px;
+    border-radius: 0 15px 15px 0;
+    margin-top: 10px;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg); 
+    transition-duration: 1.5s;
+}
+/* .page img{
+    width:100%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}   */
+.front_page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+    /* transition: transform 1s; */
+}
+.back_page{
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    z-index: 99;
+}
+.next, .prev{
+    position: absolute;
+    bottom: 1em;
+    cursor:pointer;
+}
+.front_page label{
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+}
+.back_page label{
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+}
+.next{
+    right: 1em;
+}
+.prev{
+    left: 1em;
+}
+#page1{
+    z-index: 5;
+}
+#page2{
+    z-index: 4;
+}
+#page3{
+    background-color: aqua;
+    z-index: 3;
+}
+#page4{
+    z-index: 2;
+    background-color: rgb(168, 205, 35);
+}
+#page5{
+    z-index: 1;
+    background-color: rgb(206, 38, 147);
+}
+#checkbox_cover:checked ~ .book {
+    transform: translateX(200px);
+}
+#checkbox_cover:checked ~ .book .cover{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+#checkbox_cover:checked ~ .book .page{
+   box-shadow: 0 0 1em rgb(219, 113, 113);
+}
+#checkbox_page1:checked ~ .book #page1{
+    /* transition: transform 5.5s, z-index 1.5s 1.5s; */
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+#checkbox_page2:checked ~ .book #page2{
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+#checkbox_page3:checked ~ .book #page3{
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+#checkbox_page4:checked ~ .book #page4{
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+.cover h1{
+    position: absolute;
+    text-align: center;
+    font-size: 100px;
+    background-color: #a32542;
+    color: transparent;
+    text-shadow: #a3254266 3px 5px 1px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+.welcome_page{
+    font-family: "Satisfy", cursive;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+.frame{
+    width: 550px;
+    height: 600px;
+}
+.frame1{
+    width: 550px;
+    height: 600px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.welcome_page h1{
+    position: absolute;
+    top: 0;
+    left:27%;
+    padding-top: 10vh;
+    font-weight: 900;
+    font-size: 70px;
+    color: #a32542;
+
+}
+.photo img{
+    width: 200px;
+    height: 200px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.about_me h1{
+    background-image: linear-gradient(90deg, #fbd3dc,#fbd3dc, #dca1fd);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em/2);
+    -webkit-background-clip: text;
+    color: #a32542;
+    font-size: 42px;
+    font-weight: 700;
+    /* padding: calc(calc(1em/16)/4); */
+    letter-spacing: calc(1em/8);
+    text-align: center;
+    margin-top: 2%;
+}
+.profile{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 80%;
+    margin:5px 40px;
+    gap:50px;
+}
+.tape{
+    width:100px;
+    height: 30px;
+    position: relative;
+    transform: rotateZ(45deg);
+    top: -70%;
+    left: 50%
+}
+.tape2{
+    width:100px;
+    height: 30px;
+    position: relative;
+    transform: rotateZ(45deg);
+    top: -33%;
+    left: -22%
+}
+.profile_text{
+    border: 5px dashed #a32542;
+    max-height: 20vh;
+    padding: 10px;
+    min-width: 264px;
+    line-height: .7em;
+}
+.profile_text span{
+   background: linear-gradient(90deg, #a32542 70%, transparent 0)0 1em/4px 2px repeat-x;
+}
+.wavy_line{
+    width: 600px;
+    height:70px;
+    position: relative;
+    top:30%;
+    left:10%;
+    overflow:hidden;
+    margin: 0 auto 0 auto;
+}
+.wavy_line:before{
+    content: attr(data-text);
+    position: relative;
+    top: -30px;
+    color: rgba(0, 0, 0, 0);
+    width: calc(100% + 27px);
+    font-size: 4em;
+    text-decoration-style: wavy;
+    text-decoration-color: #25173a;
+    text-decoration-line: underline;
+    /* animation: wavy .9s linear infinite;
+    -webkit-animation:  wavy .9s linear infinite; */
+}
+@keyframes wavy {
+    0%{left:-0px;}
+    100%{left: -30px}
+}
+@-webkit-keyframes wavy {
+    0%{left:-0px;}
+    100%{left: -30px}
+}
+.wavy_line_pink:before{
+    text-decoration-color: #a32542;
+}
+.about_text{
+    position: relative;
+    top:25%;
+    width: 85%;
+    margin: 40px 40px;
+    border: 5px dashed #a32542;
+    max-height: 25vh;
+    padding:10px;
+}
+.skills h1{
+    background-image: linear-gradient(90deg, #fbd3dc,#fbd3dc, #dca1fd);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em/2);
+    -webkit-background-clip: text;
+    color: #a32542;
+    font-size: 42px;
+    font-weight: 700;
+    /* padding: calc(calc(1em/16)/4); */
+    letter-spacing: calc(1em/8);
+    text-align: center;
+}

@@ -5,6 +5,7 @@
     --background-color: #f6f6f6;
     --text-color: #212529;
 }
+
 *{
     box-sizing: border-box;
 }
@@ -36,7 +37,7 @@ body{
     /* background-color: blueviolet; */
     background-image: url(images/fur.jpeg);
 }
-input{
+.input_box{
     display: none;
 }
 .cover{
@@ -116,16 +117,13 @@ input{
     z-index: 4;
 }
 #page3{
-    background-color: aqua;
     z-index: 3;
 }
 #page4{
     z-index: 2;
-    background-color: rgb(168, 205, 35);
 }
 #page5{
     z-index: 1;
-    background-color: rgb(206, 38, 147);
 }
 #checkbox_cover:checked ~ .book {
     transform: translateX(200px);
@@ -191,6 +189,9 @@ input{
     color: #a32542;
 
 }
+a{
+    color: #a32542;
+}
 .photo img{
     width: 200px;
     height: 200px; 
@@ -198,6 +199,37 @@ input{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.button{
+    background-color: #fbd3dc; 
+    border: 4px solid #a32542;
+    color: #a32542; 
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    padding: 5px;
+    cursor:pointer;
+    /* box-shadow: 0 9px #521a27; */
+    z-index: 5;
+
+}
+.button:hover {
+    background-color: #a32542;
+    color: #ffffff; 
+}
+.button:active{
+    box-shadow: 0 5px #521a27;
+    transform: translateY(4px);
+}
+.photo-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin: 10px, 20px; */
+    position: absolute;
+    top:90%;
+    left: 15%;
+    width:60%;
 }
 .about_me h1{
     background-image: linear-gradient(90deg, #fbd3dc,#fbd3dc, #dca1fd);
@@ -218,42 +250,43 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 80%;
-    margin:5px 40px;
-    gap:50px;
+    /* max-width: 90%; */
+    margin:5px 15px;
+    gap:20px;
 }
 .tape{
     width:100px;
     height: 30px;
     position: relative;
     transform: rotateZ(45deg);
-    top: -70%;
-    left: 50%
+    top: -77%;
+    left: 40%
 }
 .tape2{
     width:100px;
     height: 30px;
     position: relative;
     transform: rotateZ(45deg);
-    top: -33%;
-    left: -22%
+    top: -13%;
+    left: -60%
 }
 .profile_text{
     border: 5px dashed #a32542;
     max-height: 20vh;
+    width: 90%;
     padding: 10px;
-    min-width: 264px;
+    /* min-width: 264px; */
     line-height: .7em;
 }
 .profile_text span{
    background: linear-gradient(90deg, #a32542 70%, transparent 0)0 1em/4px 2px repeat-x;
 }
 .wavy_line{
-    width: 600px;
+    width: 500px;
     height:70px;
     position: relative;
-    top:30%;
-    left:10%;
+    top:28%;
+    left:-3%;
     overflow:hidden;
     margin: 0 auto 0 auto;
 }
@@ -285,12 +318,21 @@ input{
     position: relative;
     top:25%;
     width: 85%;
-    margin: 40px 40px;
+    margin: 40px 15px;
     border: 5px dashed #a32542;
     max-height: 25vh;
     padding:10px;
 }
-.skills h1{
+.skill_container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+    margin:5px 40px;
+    gap:50px;
+}
+.skills_heading h1{
     background-image: linear-gradient(90deg, #fbd3dc,#fbd3dc, #dca1fd);
     background-clip: text;
     -webkit-text-stroke-color: transparent;
@@ -302,4 +344,142 @@ input{
     /* padding: calc(calc(1em/16)/4); */
     letter-spacing: calc(1em/8);
     text-align: center;
+}
+
+.skills{
+    position: relative;
+    width: 85%; 
+    height: 60vh;
+    max-height:60vh;
+    display: flexbox;
+    align-items:center;
+    justify-content:center;
+    margin-top: -10%;
+}
+.skills h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #a32542;
+    font-size: 16px;
+    /* margin-left: 40px; */
+}
+.skills_bar{
+    background:#75858f;
+    width: 500px;
+    height: 10px;
+    border-radius: 5px;
+    /* margin: 40px 40px; */
+}
+.skills_bar div{
+    height: 10px;
+    border-radius: 5px;
+    /* width: 50%; */
+    background-color: #a32542;
+}
+.skills_bar div span{
+    height: 300%;
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    float: right;
+    margin-top: -10px;
+    margin-right: -20px;
+    color: #313436;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+.html{
+    width: 90%;
+}
+.css{
+    width: 85%;
+}
+.javascript{
+    width: 75%;
+}
+.react{
+    width: 60%;
+}
+.figma{
+    width:45% ;
+}
+.html span{
+    border: 1px solid #a32542;
+}
+.css span{
+    border: 1px solid #a32542;
+}
+.javascript span{
+    border: 1px solid #a32542;
+}
+.react span{
+    border: 1px solid #a32542;
+}
+.figma span{
+    border: 1px solid #a32542;
+}
+.project_name{
+    color: #a32542;
+    margin-top: 25px;
+}
+.project_button{
+    display: block; 
+    margin: auto; 
+    background-color: #fbd3dc; 
+    border: 4px solid #a32542;
+    color: #a32542; 
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+}
+.contact-form-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+
+}
+.contact-form label {
+    font-weight: 400;
+    font-size: large;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+    color: #a32542;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #a32542;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Submit button styling */
+.contact-form button {
+    margin-left: 40%;
+    background-color: #fbd3dc;
+    border: 4px solid #a32542;
+    color: #a32542; 
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #a32542;
+    border: 4px solid #a32542;
+    color: #ffffff; 
 }

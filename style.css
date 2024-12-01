@@ -457,12 +457,12 @@ a{
 }
 .about_text{
     position: relative;
-    top:25%;
     width: 85%;
-    margin: 40px 15px;
+    margin-left: 15px;
+    margin-top:35%;
     border: 5px dashed #a32542;
-    max-height: 25vh;
-    padding:10px;
+    max-height: 30vh;
+    padding:20px;
 }
 .skill_container{
     position: absolute;

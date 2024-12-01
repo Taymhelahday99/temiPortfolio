@@ -1,14 +1,14 @@
 @media screen and (max-width: 600px) {
     .book {
-        width: 100%; /* Adjust width for vertical layout */
+        width: 100vw; /* Adjust width for vertical layout */
         height: 340px; /* Adjust height for vertical layout */
-        margin-left: 2%; 
+        margin-left: 0%; 
         margin-right: auto;
         perspective: 1200px; /* Adjust perspective */
     }
 
     .cover, .back_cover, .page {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         border-radius: 15px; /* Rounded corners on mobile */
     }
@@ -60,17 +60,17 @@
     }
     .frame{
         width: 100%;
-        height: 45vh;
+        height: 50vh;
         margin-top: -2%;
     }
     .welcome_page h1{
         font-size: 40px; 
-        top: -10%;
+        top: 0%;
         left: 25%;  
     }
     .photo-img{
         top: 10%;
-        left: 30%;
+        left: 25%;
         scale: 1.2;       
     }
     .sticker{
@@ -83,70 +83,71 @@
     .photo-button{
         top:85%;
         left: 20%;   
-        scale: 0.8;     
+        scale: 0.8; 
+        z-index: 3;    
     }
     
     .about_me h1{
         font-size: 20px;
         margin-top: -1%;
+        margin-left: -10%;
     }
     .about_header h2{
         font-size: 20px;
-        margin-top: -9.3%;
-        margin-left: 150px;
+        margin-top: -11.8%;
+        margin-left: 20%;
     }
     .profile{
         margin-top: -3%;
-        gap: 5px;
+        gap: 0px;
     }
     .profile_text{
-        transform: scaleY(.9);
-        width: 80vw;
-        padding: 5px;
+        transform: scaleY(.8);
+        width: 55vw;
+        padding-bottom: 5px;
         font-size: 16px;
+        font-size: 14px;
     }
     .profile_img{
-        transform: scale(.8);
-        margin-top: -2%;
+        transform: scale(.7);
+        margin-top: -3%;
+        margin-left: 0%;
     }
     .tape{
-        transform: scale(.7);
-        position: relative;
-        transform: rotateZ(45deg);
-        top: -80%;
-        left: 30%
+       display: none;
     }
     .tape2{
-        transform: scale(.7);
-        position: relative;
-        transform: rotateZ(45deg);
-        top: -20%;
-        left: -55%;
+      display: none;
     }
     .wavy_line{
         display: none;     
     }
     .about_text{
-        transform: scaleY(.7);
-        width: 80vw;
-        padding: 5px;
+        transform: scaleY(.8);
+        width: 85vw;
+        padding-top: 0%;
         font-size: 16px;
-        margin-top: 10%;
+        margin-top: 35%;
+        position: relative;
+        max-height: 30vh;
+        /* text-align: left; */
+    
     }
     .skills_heading h1{
         font-size: 20px;
         margin-top: 1%;
     }
     .skills{
-        transform: scaleY(.6);
+        /* transform: scaleY(.3); */
+        transform: scale(.7);
         margin-top: -40%;
-        /* margin-left: -10%; */
+        margin-left: -10%;
     }
     .skills_bar{
         width: 400px;
     }
     .project_name{
-        margin-top: -15%;
+        margin-top: -20%;
     }
     .project_name h2{
        margin: auto;
@@ -157,31 +158,33 @@
         max-width: 100%;
         margin: auto;
         margin-left: 5%;
+        font-size: 14px;
     }
     .project_img{
         width:80%; 
         height: 65%; 
         position: relative;
-         margin-top: 0%; 
+         margin-top: -2%; 
          left: 10%; 
          z-index: 0;
     }
     .project_name a{
         margin-left: 20%;
-        
+        z-index: 3;
     }
     .project_name span{
         margin-left: 15%;
         display: inline-block;
         width:30%;
+        z-index: 3;
     }
     .ptape{
         width:60px;
         height: 20px;
         position: relative;
         transform: rotateZ(45deg);
-        top: -55%;
-        left: 0%;
+        top: -70%;
+        left: 80%;
     }
     .ptape2{
         width:60px;
@@ -189,13 +192,13 @@
         position: relative;
         transform: rotateZ(135deg);
         top: -67%;
-        left: 0%;
+        left: -25%;
     }
     .bproject_img{
         width:80%; 
         height: 65%; 
         position: relative;
-         margin-top: 0%; 
+         margin-top: -2%; 
          left: 10%; 
          z-index: 0;
     }
@@ -205,11 +208,11 @@
         position: relative;
         transform: rotateZ(135deg);
         top: -67%;
-        left: 0%;
+        left: -25%;
     }
     .contact-form{
-        transform: scaleY(.7);
-        margin-top: -12%;
+        transform: scaleY(.6);
+        margin-top: -20%;
     }
    
 }

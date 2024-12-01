@@ -11,12 +11,116 @@
 }
 
 body{
-    font-family:"Poppin", sans-serif;
+    /* font-family:"Poppin", sans-serif; */
     height:100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Satisfy", cursive;
+    background-color: #313436;
+    overflow: hidden;
+    overflow-y: hidden;
+    background-image: url(/images/wood-textured-red-background-new-chinese-year.jpg);
+    background-size: cover;
+    
+}
+.loader{
+    position: relative;
+    width:300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: animateColor 7.2s linear infinite; */
+}
+@keyframes animateColor 
+{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
+.loader span{
+    position: absolute;
+    transform-origin: 300px;
+    transform: translateX(-300px) rotate(calc(var(--i)*30deg));
+    filter: drop-shadow(0 0 5px #fbc0ca) drop-shadow(0 0 15px #fbc0ca) 
+    drop-shadow(0 0 30px #fbc0ca);
+}
+.loader span i{
+    position: relative;
+    color: #fbc0ca;
+    animation: rotate-stars 2.4s linear infinite;
+    animation-delay: calc(var(--i) * -0.2s);
+}
+@keyframes rotate-stars {
+    0%{
+        transform: rotate(0deg) scale(0);
+    }
+    50%{
+        transform: rotate(180deg) scale(3);
+    }
+    100%{
+        transform: rotate(360deg) scale(0);
+    }
+}
+.loader span::before{
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 0.75rem;
+    color: #131a1c;
+    animation: rotate-particle 2.4s linear infinite;
+    animation-delay: calc(var(--i) * -0.2s);
+}
+@keyframes rotate-particle {
+    0%{
+       scale: 1;
+       opacity: 0;
+       rotate: 0deg;
+    }
+    50%{
+        scale: 1;
+        opacity: 1;
+        rotate: 180deg;
+    }
+    100%{
+        scale: 0;
+        opacity: 0;
+        rotate: 360deg;
+        filter: drop-shadow(-150px 0 #fbc0ca) drop-shadow(150px 0 #fbc0ca)
+        drop-shadow(0 150px #fbc0ca) drop-shadow(0 -150px #fbc0ca);
+    }
+}
+.star{
+    position: absolute;
+    max-width: 100vw;
+    top:-50px;
+    color: #fff;
+    animation: animate 5s linear forwards;
+    z-index: -50;
+}
+.star::before{
+    content: '\f005';
+    font-family: fontAwesome;
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff,
+    0 0 50px #fff;
+}
+@keyframes animate {
+    0%{
+     transform: translateY(0) rotate(0deg);
+     opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 .book{
     width: 600px;
@@ -25,6 +129,19 @@ body{
     transition-duration: 1s;
     perspective: 1500;
     margin-left: 200px;
+    display: none;
+    animation: spin-in 1s linear;
+}
+@keyframes spin-in {
+    0%{
+        transform: scale(3);
+        /* rotate: 0deg; */
+    }
+    100%{
+        transform: scale(1);
+        /* rotate: 360deg; */
+    }
+    
 }
 .cover, .back_cover{
     width:100%;
@@ -34,8 +151,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: blueviolet; */
     background-image: url(images/fur.jpeg);
+    background-size: contain;
+    font-family: "Satisfy", cursive;
 }
 .input_box{
     display: none;
@@ -67,11 +185,7 @@ body{
     transform: rotateY(0deg); 
     transition-duration: 1.5s;
 }
-/* .page img{
-    width:100%;
-    height: 100%;
-    border-radius: 15px 0 0 15px;
-}   */
+
 .front_page{
     position: absolute;
     width: 100%;
@@ -163,6 +277,7 @@ body{
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+    font-family: "Satisfy", cursive;
 }
 .welcome_page{
     font-family: "Satisfy", cursive;
@@ -183,6 +298,7 @@ body{
     position: absolute;
     top: 0;
     left:27%;
+    max-width: 50%;
     padding-top: 10vh;
     font-weight: 900;
     font-size: 70px;
@@ -192,13 +308,22 @@ body{
 a{
     color: #a32542;
 }
-.photo img{
+.photo-img{
     width: 200px;
     height: 200px; 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 35%;
+    scale: 2;
+    background-color: #fbd3dc;            
+    border: 5px dashed #ffffff;     
+}
+.sticker{
+    width:200px; 
+    height: 200px; 
+    position: absolute; 
+    top:57%; 
+    left: 70%;
 }
 .button{
     background-color: #fbd3dc; 
@@ -209,8 +334,8 @@ a{
     border-radius: 10%;
     padding: 5px;
     cursor:pointer;
-    /* box-shadow: 0 9px #521a27; */
     z-index: 5;
+    margin-top: -10%;
 
 }
 .button:hover {
@@ -244,6 +369,22 @@ a{
     letter-spacing: calc(1em/8);
     text-align: center;
     margin-top: 2%;
+    font-family: "Satisfy", cursive;
+}
+.about_me h2{
+    background-image: linear-gradient(90deg, #fbd3dc,#fbd3dc, #dca1fd);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em/2);
+    -webkit-background-clip: text;
+    color: #a32542;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: calc(1em/8);
+    text-align: center;
+    margin-top: -8%;
+    margin-left:25%;
+    font-family: "Satisfy", cursive;
 }
 .profile{
     position: absolute;
@@ -255,20 +396,20 @@ a{
     gap:20px;
 }
 .tape{
-    width:100px;
+    width:80px;
     height: 30px;
     position: relative;
     transform: rotateZ(45deg);
-    top: -77%;
-    left: 40%
+    top: -80%;
+    left: 45%
 }
 .tape2{
-    width:100px;
+    width:80px;
     height: 30px;
     position: relative;
     transform: rotateZ(45deg);
-    top: -13%;
-    left: -60%
+    top: -20%;
+    left: -55%
 }
 .profile_text{
     border: 5px dashed #a32542;
@@ -423,18 +564,66 @@ a{
 }
 .project_name{
     color: #a32542;
-    margin-top: 25px;
+    margin-top: -20%;
 }
-.project_button{
-    display: block; 
-    margin: auto; 
-    background-color: #fbd3dc; 
-    border: 4px solid #a32542;
-    color: #a32542; 
-    height: 50px;
-    width: 100px;
-    border-radius: 10%;
+.project_name h2{
+   margin: auto;
+   text-align: center;
 }
+.project_name p{
+    max-width: 80%;
+    margin: auto;
+}
+.project_name a{
+    margin-left: 10%;
+    
+}
+.project_name span{
+    margin-left: 40%;
+    display: inline-block;
+    width:20%;
+}
+.project_img{
+    width:95%; 
+    height: 70%; 
+    position: relative;
+     margin-top: 12px; 
+     left: 2%; 
+     z-index: 0;
+}
+.bproject_img{
+    width:95%; 
+    height: 70%; 
+    position: relative;
+     margin-top: 12px; 
+     left: 3%; 
+     z-index: 0;
+}
+.ptape{
+    width:100px;
+    height: 30px;
+    position: relative;
+    transform: rotateZ(45deg);
+    top: -70%;
+    left: 85%;
+}
+.ptape2{
+    width:100px;
+    height: 30px;
+    position: relative;
+    transform: rotateZ(135deg);
+    top: -70%;
+    left: -25%
+}
+.bptape2{
+    width:100px;
+    height: 30px;
+    position: relative;
+    transform: rotateZ(135deg);
+    top: -70%;
+    left: -22%
+}
+
 .contact-form-container {
     padding: 20px;
     border-radius: 8px;

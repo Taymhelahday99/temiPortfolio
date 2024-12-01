@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="script.js">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +23,29 @@
     <script src="https://kit.fontawesome.com/7a06cfae9b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="loader" id="loader">
+        <span style="--i:1;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:2;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:3;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:4;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:5;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:6;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:7;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:8;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:9;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:10;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:11;"><i class="fa-solid fa-star"></i></span>
+        <span style="--i:12;"><i class="fa-solid fa-star"></i></span>
+
+    </div>
+
     <input class="input_box" type="checkbox" name="" id="checkbox_cover">
     <input class="input_box" type="checkbox" name="" id="checkbox_page1">
     <input class="input_box" type="checkbox" name="" id="checkbox_page2">
     <input class="input_box" type="checkbox" name="" id="checkbox_page3">
     <input class="input_box" type="checkbox" name="" id="checkbox_page4">
     <input class="input_box" type="checkbox" name="" id="checkbox_page5">
-   <div class="book">
+   <div class="book" id="content">
     <div class="cover">
         <h1>ADELEYE <br> TEMILADE</h1>
         <label for="checkbox_cover"></label>
@@ -33,10 +54,10 @@
         <div class="front_page">
             <div class="welcome_page">
                 <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; 
+            style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; 
             border-radius:0 15px 15px 0; z-index: -1; opacity: 0.3;">
                 <img src="images/frame2.png" alt="" class="frame">
-                <h1>Welcome <br> To My <br> Awesome <br>Website</h1>
+                <h1>Welcome To My Awesome Portfolio</h1>
             </div>
             <label for="checkbox_page1" class="next">
             <!-- <i class="uil uil-angle-right"></i> -->
@@ -44,40 +65,23 @@
         </div>
         <div class="back_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <!-- <img src="images/vecteezy_elegant-gold-floral-corner-border-with-hand-drawn-leaves-and_24684594.png" alt="" class="frame1"> -->
             <div class="photo">
-                <img src="images/IMG_4022-removebg-preview (1).png" alt="" style="scale: 2.3; background-color: #fbd3dc;  
-                border: 5px dashed #ffffff;  display: inline-block; position: absolute; top: 70%; left: 72%; padding-top:-70%;">
-                <!-- <img src="images/IMG_4085-removebg-preview (1).png" alt="" style="width:400px; height: 500px; background-color: #fbd3dc;  
-                border: 5px dashed #ffffff;  display: inline-block;"> -->
-                <img src="images/sticker_1.png" alt="" style=" width:400px; height: 300px; position: absolute; top:80%; left: 90%;">
-                <img src="images/sticker_8.png" alt="" style=" width:130px; height: 100px; position: absolute; top:15%; left: 15%;">
+                <img src="images/IMG_4022-removebg-preview (1).png" alt="" class="photo-img">
+                
+                <img src="images/sticker_1.png" alt=""class="sticker">
+                <!--<img src="images/sticker_8.png" alt="" style=" width:130px; height: 100px; position: absolute; top:15%; left: 15%;">
                 <img src="images/sticker_5.png" alt="" style=" width:80px; height: 80px; position: absolute; top:85%; left: 10%;">
-                <img src="images/sticker_2.png" alt="" style=" width:150px; height: 250px; position: absolute; top:15%; left: 85%;">
+                <img src="images/sticker_2.png" alt="" style=" width:150px; height: 250px; position: absolute; top:15%; left: 85%;"> -->
                 <!-- <img src="images/sticker_12.png" alt="" style=" width:50px; height: 80px; position: absolute; top:50%; left: 88%;"> -->
                 <!-- <img src="images/sticker 6.png" alt="" style=" width:50px; height: 40px; position: absolute; top:50%; left: 12%;"> -->
                 <!-- <img src="images/sticker_7.png" alt="" style=" width:60px; height: 50px; position: absolute; top:42%; left: 12%;"> -->
-                <img src="images/sticker_27.png" alt="" style=" width:50px; height: 50px; position: absolute; top:70%; left: 83%;">
+                <!-- <img src="images/sticker_27.png" alt="" style=" width:50px; height: 50px; position: absolute; top:70%; left: 83%;"> -->
                 <!-- <img src="images/sticker_35.png" alt="" style=" width:50px; height: 50px; position: absolute; top:40%; left: 93%;"> -->
                 <!-- <img src="images/sticker_22.png" alt="" style=" width:30px; height: 30px; position: absolute; top:35%; left: 88%;"> -->
                 <!-- <img src="images/sticker_23.png" alt="" style=" width:30px; height: 30px; position: absolute; top:30%; left: 88%;"> -->
-                <img src="images/sticker_32.png" alt="" style=" width:50px; height: 50px; position: absolute; top:10%; left: 55%;">
-                <!-- <img src="images/sticker_26.png" alt="" style=" width:80px; height: 60px; position: absolute; top:15%; left: 50%;"> -->
-                <!-- <img src="images/sticker_34.png" alt="" style=" width:50px; height: 50px; position: absolute; top:15%; left: 35%;"> -->
-                <img src="images/sticker_36.png" alt="" style=" width:30px; height: 30px; position: absolute; top:12%; left: 33%; transform: rotateZ(40deg);">
-                <!-- <img src="images/sticker_33.png" alt="" style=" width:50px; height: 50px; position: absolute; top:30%; left: 15%;"> -->
-                <img src="images/sticker_28.png" alt="" style=" width:30px; height: 30px; position: absolute; top:25%; left: 8%;">
-                <img src="images/fly.png" alt="" style=" width:30px; height: 30px; position: absolute; top:45%; left: 8%;">
-                <!-- <img src="images/sticker_31.png" alt="" style=" width:40px; height: 50px; position: absolute; top:55%; left: 8%;"> -->
-                <!-- <img src="images/sticker_24.png" alt="" style=" width:100px; height: 60px; position: absolute; top:88%; left: 30%;"> -->
-                <!-- <img src="images/sticker_30.png" alt="" style=" width:50px; height: 60px; position: absolute; top:85%; left: 50%;"> -->
-                <!-- <a href="https://www.vecteezy.com/free-vector/journal-template">Journal Template Vectors by Vecteezy</a> -->
-                <!-- <img src="images/pexels-karolina-grabowska-4041285-removebg-preview.png" alt="" 
-                style="width: 180px; height: 450px; position: absolute; top:50%; left: 30%;">
-                <img src="images/pexels-karolina-grabowska-4041285-removebg-preview.png" alt="" 
-                style="width: 180px; height: 450px; position: absolute; top:14.3%; left: 55%;transform: rotateY(180deg);"> -->
-                <!-- <h2>ME</h2> -->
+             
             </div>
             <div class="photo-button">
                 <a href="images/Temilade Resume.pdf" download></a><button type="" class="button">Download CV</button>
@@ -86,18 +90,18 @@
             <!-- <img src="images/vecteezy_washi-tape-with-paper-texture-old-paper-mulberry-paper_9664834.png" alt="" 
             style="width: 500px; height: 100px; position: absolute; top: 2%; left: 10%; z-index: -2;"> -->
             <label for="checkbox_page1" class="prev">
-            <i class="uil uil-angle-left"></i>
+            <!-- <i class="uil uil-angle-left"></i> -->
             </label>
         </div>
     </div>
     <div class="page" id="page2">
         <div class="front_page about_me">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; 
+            style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; 
             border-radius:0 15px 15px 0; z-index: -1; opacity: 0.3;">
             <div class="about_header">
                 <h1> ABOUT</h1>
-            <h1 style= "margin-top: -50px; margin-left: 150px;">ME</h1>
+                <h2>ME</h2>
             </div>
             <div class="profile">
                 <div class="profile_text">
@@ -114,26 +118,22 @@
             </div>
             <div class="wavy_line wavy_line_pink" data-text="xxxxxxxxxxxxxxxxx"></div>
             <div class="about_text" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat distinctio nam labore quam mollitia magnam
-                 modi explicabo ad vero hic quibusdam, veritatis 
-                 nesciunt atque vel earum sit? Nemo, hic doloribus! 
-                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quibusdam amet nobis architecto saepe repellat incidunt 
-                  minima sunt libero obcaecati, corrupti dignissimos eum 
-                  deserunt dolores.</p>
+            <p>I am a Passionate Frontend Developer with expertise in HTML, CSS, JavaScript, and React.js. Adept at creating
+                responsive, user-friendly web applications with a focus on clean, maintainable code and best practices.
+                Experienced in collaborating with cross-functional teams to deliver impactful solutions.
+                  </p>
             </div>
-            <img src="images/sticker_19.png" alt="" style=" width:60px; height: 40px; position: absolute; top:93%; left: 90%;">
+            <!-- <img src="images/sticker_19.png" alt="" style=" width:60px; height: 40px; position: absolute; top:93%; left: 90%;"> -->
             <img src="images/sticker_13.png" alt="" style=" width:40px; height: 40px; position: absolute; top:70%; left: 91%;">
             <img src="images/sticker_14.png" alt="" style=" width:40px; height: 40px; position: absolute; top:40%; left: 2%;">
-            <img src="images/sticker_28.png" alt="" style=" width:30px; height: 30px; position: absolute; top:25%; left: 5%;">
+            <!-- <img src="images/sticker_28.png" alt="" style=" width:30px; height: 30px; position: absolute; top:25%; left: 5%;"> -->
             <label for="checkbox_page2" class="next">
-                <i class="uil uil-angle-right"></i>
+                <!-- <i class="uil uil-angle-right"></i> -->
             </label>
         </div>
         <div class="back_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skill_container">
                 <div class="skills_heading">
                     <h1> Skills</h1>
@@ -162,102 +162,114 @@
                 </div>
             </div>
             <label for="checkbox_page2" class="prev">
-                <i class="uil uil-angle-left"></i>
+                <!-- <i class="uil uil-angle-left"></i> -->
             </label>
         </div>
     </div>
     <div class="page" id="page3">
         <div class="front_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skills_heading">
                 <h1> Projects</h1>
             </div>
-            <div>
-                <img src="images/vecteezy_hand-drawn-cute-frame_9586475.png" alt=""  
-                style="width:500px; height: 350px; position: absolute; top: 20%; left: 8%; z-index: 1;">
-                <img src="images/cloudy-pink-sky-background.jpg" alt="" 
-                style="width:445px; height: 320px; position: relative; margin-top: 12px; left: 10.5%; z-index: 0;">
+            <div class="project_img">
+                <img src="images/micheals  (1).png" alt="" class="project_img">
+                <img src="images/sticker 17.jpg" alt="" class="ptape">
+                <img src="images/sticker 17.jpg" alt="" class="ptape2">
             </div>
             <div class="project_name">
-                <h2 style="display: inline; margin-left: 8%; margin-right: 45%;">Project name</h2>
-                <span></span><a href="">Live preview</a></span>
+                <h2>Game Developers Portfolio</h2>
+                <p>A portfolio website designed to showcase projects and skills in game development. 
+                    Built with HTML, CSS, and JavaScript, it features a modern, 
+                    responsive design optimized for seamless navigation on desktop and mobile devices.</p>
+                <a href="https://awesomemike.netlify.app">Live preview</a>
+                <span><a href="https://github.com/Taymhelahday99/micheal_portfolio">Source Code</a></span>
             </div>
-            <button class="project_button">Source code </button>
+            
             <label for="checkbox_page3" class="next">
-                <i class="uil uil-angle-right"></i>
+                <!-- <i class="uil uil-angle-right"></i> -->
             </label>
         </div>
         <div class="back_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width: 100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skills_heading">
                 <h1> Projects</h1>
             </div>
-            <div>
-                <img src="images/vecteezy_hand-drawn-cute-frame_9586475.png" alt=""  
-                style="width:500px; height: 350px; position: absolute; top: 20%; right: 8%; z-index: 1;">
-                <img src="images/cloudy-pink-sky-background.jpg" alt="" 
-                style="width:445px; height: 320px; position: relative; margin-top: 20px; left: 10.5%; z-index: 0;">
+            <div class="bproject_img">
+                <img src="images/Coffee Cafe.png" alt="" class="bproject_img">
+                <img src="images/sticker 18.jpg" alt="" class="ptape">
+                <img src="images/sticker 18.jpg" alt="" class="bptape2">
             </div>
             <div class="project_name">
-                <h2 style="display: inline; margin-left: 8%; margin-right: 45%;">Project name</h2>
-                <span></span><a href="">Live preview</a></span>
+                <h2>Coffee Cafe</h2>
+                <p>A responsive and visually appealing coffee shop website 
+                    showcasing the shop's offerings with a modern design. 
+                    Built using HTML, CSS, and JavaScript, it features a clean layout 
+                    and smooth responsiveness for both desktop and mobile devices.</p>
+                <a href="https://taymhelahday99.github.io/Coffee-shop/">Live preview</a>
+                <span><a href="https://github.com/Taymhelahday99/Coffee-shop">Source Code</a></span>
             </div>
-            <button class="project_button">Source code </button>
                 <label for="checkbox_page3" class="prev">
-                    <i class="uil uil-angle-left"></i>
+                    <!-- <i class="uil uil-angle-left"></i> -->
                 </label>
         </div>
     </div>
      <div class="page" id="page4">
         <div class="front_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width: 100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skills_heading">
                 <h1> Projects</h1>
             </div>
-            <div>
-                <img src="images/vecteezy_hand-drawn-cute-frame_9586475.png" alt=""  
-                style="width:500px; height: 350px; position: absolute; top: 20%; left: 8%; z-index: 1;">
-                <img src="images/cloudy-pink-sky-background.jpg" alt="" 
-                style="width:445px; height: 320px; position: relative; margin-top: 12px; left: 10.5%; z-index: 0;">
+            <div class="project_img">
+                <img src="images/realestate.png" alt="" class="project_img">
+                <img src="images/sticker 18.jpg" alt="" class="ptape">
+                <img src="images/sticker 18.jpg" alt="" class="ptape2">
             </div>
             <div class="project_name">
-                <h2 style="display: inline; margin-left: 8%; margin-right: 45%;">Project name</h2>
-                <span></span><a href="">Live preview</a></span>
+                <h2>Real Estate Website</h2>
+                <p>A modern real estate webpage showcasing property listings with a clean 
+                    and user-friendly design. Built using HTML, CSS, and JavaScript, 
+                    it features responsive layouts, interactive elements, and
+                     a professional aesthetic tailored for desktop and mobile users.</p>
+                <a href="https://taymhelahday99.github.io/realEstateProject/">Live preview</a>
+                <span><a href="https://github.com/Taymhelahday99/realEstateProject">Source Code</a></span>
             </div>
-            <button class="project_button">Source code </button>
                 <label for="checkbox_page4" class="next">
-                    <i class="uil uil-angle-right"></i>
+                    <!-- <i class="uil uil-angle-right"></i> -->
                 </label>
         </div>
         <div class="back_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width: 100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skills_heading">
                 <h1> Projects</h1>
             </div>
-            <div>
-                <img src="images/vecteezy_hand-drawn-cute-frame_9586475.png" alt=""  
-                style="width:500px; height: 350px; position: absolute; top: 20%; right: 8%; z-index: 1;">
-                <img src="images/cloudy-pink-sky-background.jpg" alt="" 
-                style="width:445px; height: 320px; position: relative; margin-top: 20px; left: 10.5%; z-index: 0;">
+            <div class="bproject_img">
+                <img src="images/easybank.jpg" alt="" class="bproject_img">
+                <img src="images/sticker 11.jpg" alt="" class="ptape">
+                <img src="images/sticker 11.jpg" alt="" class="bptape2">
             </div>
             <div class="project_name">
-                <h2 style="display: inline; margin-left: 8%; margin-right: 45%;">Project name</h2>
-                <span></span><a href="">Live preview</a></span>
+                <h2>Easy Bank Landing Page</h2>
+                <p>A sleek and responsive digital bank landing page designed to
+                     highlight key services and features. Built using HTML, CSS, 
+                     and JavaScript, it incorporates modern design principles and 
+                     ensures seamless navigation across desktop and mobile devices.</p>
+                <a href="https://easybank-landing.onrender.com/">Live preview</a>
+                <span><a href="https://github.com/Taymhelahday99/Easybank-Landing-Page">Source Code</a></span>
             </div>
-            <button class="project_button">Source code </button>
                 <label for="checkbox_page4" class="prev">
-                    <i class="uil uil-angle-left"></i>
+                    <!-- <i class="uil uil-angle-left"></i> -->
                 </label>
         </div>
     </div>
     <div class="page" id="page5">
         <div class="front_page">
             <img src="images/prettypink_pattern.jpeg" alt=""
-            style="width:580px; height: 630px; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
+            style="width: 100%; height: 100%; position: absolute; top: 0%; left: 0%; border-radius:15px 0 0 15px; z-index: -1; opacity: 0.3;">
             <div class="skills_heading">
                 <h1> Contact Me</h1>
             </div>
@@ -274,11 +286,52 @@
                 <a href="mailto: taymelahday99@gmail.com"></a><button type="submit" class="button">Submit</button>
             </form>
                 <label for="checkbox_page5" class="next">
-                    <i class="uil uil-angle-right"></i>
+                    <!-- <i class="uil uil-angle-right"></i> -->
                 </label>
         </div>
     </div>
     <div class="back_cover"></div>
    </div> 
+   <script>
+    function stars() {
+        let e = document.createElement('div');
+        e.setAttribute('class', 'star');
+        document.body.appendChild(e);
+        e.style.left = Math.random() * innerWidth + 'px';
+
+        let size = Math.random() * 3;
+        let duration = Math.random() * 3;
+
+        e.style.fontSize = 3 + size + 'px';
+        e.style.animationDuration = 2 + duration + 's';
+
+        setTimeout(function () {
+            document.body.removeChild(e);
+        }, 2000);
+    }
+
+    // Delay the interval logic by 5 seconds
+    setTimeout(function () {
+        setInterval(function () {
+            stars();
+        }, 100);
+    }, 2000); // 5-second delay before starting the interval
+</script>
+
+<script>
+    
+    window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("content");
+
+            setTimeout(() => {
+                loader.style.display = "none"; // Hide the loader
+                content.style.display = "block"; // Show the main content
+                document.body.style.overflow = "auto"; // Enable scrolling
+            }, 2000);
+        
+        });
+        
+    </script>
 </body>
 </html>

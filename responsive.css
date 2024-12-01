@@ -1,0 +1,215 @@
+@media screen and (max-width: 600px) {
+    .book {
+        width: 100%; /* Adjust width for vertical layout */
+        height: 340px; /* Adjust height for vertical layout */
+        margin-left: 2%; 
+        margin-right: auto;
+        perspective: 1200px; /* Adjust perspective */
+    }
+
+    .cover, .back_cover, .page {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px; /* Rounded corners on mobile */
+    }
+
+    .cover {
+        transform-origin: top center; /* Flip from the top */
+        transition: transform 1s;
+    }
+
+    .page {
+        transform-origin: top; /* Flip pages vertically */
+        transform: rotateX(0deg); /* Default state */
+    }
+
+    .back_page {
+        transform: rotateX(180deg); /* Backside for vertical flip */
+    }
+    #checkbox_cover:checked ~ .book {
+        transform: translateX(0px);
+        transform: translateY(70%);
+    }
+
+    /* Adjust flipping styles */
+    #checkbox_cover:checked ~ .book .cover {
+        transform: rotateX(180deg); /* Flip vertically */
+    }
+
+    #checkbox_page1:checked ~ .book #page1 {
+        transform: rotateX(180deg);
+        z-index: 4;
+    }
+
+    #checkbox_page2:checked ~ .book #page2 {
+        transform: rotateX(180deg);
+        z-index: 5;
+    }
+
+    #checkbox_page3:checked ~ .book #page3 {
+        transform: rotateX(180deg);
+        z-index: 6;
+    }
+
+    #checkbox_page4:checked ~ .book #page4 {
+        transform: rotateX(180deg);
+        z-index: 7;
+    }
+    .cover h1{
+        font-size: 60px; 
+    }
+    .frame{
+        width: 100%;
+        height: 45vh;
+        margin-top: -2%;
+    }
+    .welcome_page h1{
+        font-size: 40px; 
+        top: -10%;
+        left: 25%;  
+    }
+    .photo-img{
+        top: 10%;
+        left: 30%;
+        scale: 1.2;       
+    }
+    .sticker{
+        width:150px; 
+        height: 150px; 
+        position: absolute; 
+        top:45%; 
+        left: 60%;
+    }
+    .photo-button{
+        top:85%;
+        left: 20%;   
+        scale: 0.8;     
+    }
+    
+    .about_me h1{
+        font-size: 20px;
+        margin-top: -1%;
+    }
+    .about_header h2{
+        font-size: 20px;
+        margin-top: -9.3%;
+        margin-left: 150px;
+    }
+    .profile{
+        margin-top: -3%;
+        gap: 5px;
+    }
+    .profile_text{
+        transform: scaleY(.9);
+        width: 80vw;
+        padding: 5px;
+        font-size: 16px;
+    }
+    .profile_img{
+        transform: scale(.8);
+        margin-top: -2%;
+    }
+    .tape{
+        transform: scale(.7);
+        position: relative;
+        transform: rotateZ(45deg);
+        top: -80%;
+        left: 30%
+    }
+    .tape2{
+        transform: scale(.7);
+        position: relative;
+        transform: rotateZ(45deg);
+        top: -20%;
+        left: -55%;
+    }
+    .wavy_line{
+        display: none;     
+    }
+    .about_text{
+        transform: scaleY(.7);
+        width: 80vw;
+        padding: 5px;
+        font-size: 16px;
+        margin-top: 10%;
+    }
+    .skills_heading h1{
+        font-size: 20px;
+        margin-top: 1%;
+    }
+    .skills{
+        transform: scaleY(.6);
+        margin-top: -40%;
+        /* margin-left: -10%; */
+    }
+    .skills_bar{
+        width: 400px;
+    }
+    .project_name{
+        margin-top: -15%;
+    }
+    .project_name h2{
+       margin: auto;
+       text-align: center;
+       font-size: 16px;
+    }
+    .project_name p{
+        max-width: 100%;
+        margin: auto;
+        margin-left: 5%;
+    }
+    .project_img{
+        width:80%; 
+        height: 65%; 
+        position: relative;
+         margin-top: 0%; 
+         left: 10%; 
+         z-index: 0;
+    }
+    .project_name a{
+        margin-left: 20%;
+        
+    }
+    .project_name span{
+        margin-left: 15%;
+        display: inline-block;
+        width:30%;
+    }
+    .ptape{
+        width:60px;
+        height: 20px;
+        position: relative;
+        transform: rotateZ(45deg);
+        top: -55%;
+        left: 0%;
+    }
+    .ptape2{
+        width:60px;
+        height: 20px;
+        position: relative;
+        transform: rotateZ(135deg);
+        top: -67%;
+        left: 0%;
+    }
+    .bproject_img{
+        width:80%; 
+        height: 65%; 
+        position: relative;
+         margin-top: 0%; 
+         left: 10%; 
+         z-index: 0;
+    }
+    .bptape2{
+        width:60px;
+        height: 20px;
+        position: relative;
+        transform: rotateZ(135deg);
+        top: -67%;
+        left: 0%;
+    }
+    .contact-form{
+        transform: scaleY(.7);
+        margin-top: -12%;
+    }
+   
+}

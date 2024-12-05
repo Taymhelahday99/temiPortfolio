@@ -6,6 +6,20 @@
         margin-right: auto;
         perspective: 1200px; /* Adjust perspective */
     }
+    .front_page label{
+        width: 100%;
+        height:5%;
+        cursor: grab;
+        z-index: 0;
+    }
+    .back_page label{
+        width: 100%;
+        height: 5%;
+        cursor: grab;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+    }
 
     .cover, .back_cover, .page {
         width: 100vw;

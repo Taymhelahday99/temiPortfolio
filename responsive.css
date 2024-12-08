@@ -1,28 +1,26 @@
 @media screen and (max-width: 600px) {
     .book {
-        width: 100vw; /* Adjust width for vertical layout */
-        height: 340px; /* Adjust height for vertical layout */
+        width: 100vw; 
+        height: 340px; 
         margin-left: 0%; 
         margin-right: auto;
-        perspective: 1200px; /* Adjust perspective */
+        perspective: 1200px; 
     }
     .front_page label{
         width: 100%;
-        height:5%;
+        height:3%;
         cursor: grab;
         z-index: 50;
-        background-color: aquamarine;
         position: absolute;
-        right: 0%;
+       bottom: 0;
     }
     .back_page label{
         width: 100%;
-        height: 5%;
+        height: 3%;
         cursor: grab;
         z-index: 0;
         position: absolute;
         top: 0;
-        background-color: aquamarine;
     }
 
     .cover, .back_cover, .page {
@@ -231,6 +229,14 @@
     .contact-form{
         transform: scaleY(.6);
         margin-top: -20%;
+    }
+    .contact-form label {
+        margin-bottom: 5%;
+     
+    }
+    .contact-form button {
+        margin-left: 35%;
+        margin-top: 10%;
     }
    
 }

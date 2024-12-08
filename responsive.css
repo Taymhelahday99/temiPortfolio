@@ -10,7 +10,10 @@
         width: 100%;
         height:5%;
         cursor: grab;
-        z-index: 0;
+        z-index: 50;
+        background-color: aquamarine;
+        position: absolute;
+        right: 0%;
     }
     .back_page label{
         width: 100%;
@@ -19,6 +22,7 @@
         z-index: 0;
         position: absolute;
         top: 0;
+        background-color: aquamarine;
     }
 
     .cover, .back_cover, .page {

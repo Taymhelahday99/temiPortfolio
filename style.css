@@ -230,6 +230,24 @@ body{
     color: #a32542;
     font-size: larger;
 }
+.next i{
+   font-size: 30px;
+   animation: jump 1s linear infinite;
+}
+.prev i{
+   font-size: 30px;
+   animation: jump 1s linear infinite;
+}
+@keyframes jump {
+    0%{
+       font-size: 35px;
+        /* rotate: 0deg; */
+    }
+    100%{
+        font-size: 30px;
+        /* rotate: 360deg; */
+    }
+}
 
 #page1{
     z-index: 5;
@@ -371,6 +389,7 @@ a{
     top:90%;
     /* left: 15%; */
     width:60%;
+    z-index: 50;
 }
 .about_me h1{
     font-family: "Satisfy", cursive; 
@@ -677,6 +696,7 @@ a{
 }
 
 .contact-form button {
+    margin-top: 5%;
     margin-left: 40%;
     background-color: #fbd3dc;
     border: 4px solid #a32542;

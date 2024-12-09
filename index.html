@@ -23,6 +23,9 @@
     <script src="https://kit.fontawesome.com/7a06cfae9b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <img src="images/wood background.png" alt=""
+    style="width:100%; height: 100%; position: absolute; top: 0%; left: 0%; 
+    border-radius:0 15px 15px 0; z-index: -1; opacity: 0.3;">
     <div class="loader" id="loader">
         <h1 style="color: white;">Loading, please wait</h1>
         <span style="--i:1;"><i class="fa-solid fa-star"></i></span>
@@ -48,7 +51,7 @@
     <input class="input_box" type="checkbox" name="" id="checkbox_page5">
    <div class="book" id="content">
     <div class="cover">
-        <h1>ADELEYE <br> TEMILADE</h1>
+        <!-- <h1>ADELEYE <br> TEMILADE</h1> -->
         <label for="checkbox_cover"></label>
     </div>
     <div class="page" id="page1">
@@ -61,7 +64,7 @@
                 <h1>Welcome To My Awesome Portfolio</h1>
             </div>
             <label for="checkbox_page1" class="next">
-            <!-- <i class="uil uil-angle-right"></i> -->
+            <i class="uil uil-angle-right"></i>
             </label>
         </div>
         <div class="back_page">
@@ -160,7 +163,7 @@
                 </div>
             </div>
             <label for="checkbox_page2" class="prev">
-                <!-- <i class="uil uil-angle-left"></i> -->
+                <i class="uil uil-angle-left"></i>
             </label>
         </div>
     </div>
@@ -283,11 +286,11 @@
                 <a href="mailto: taymelahday99@gmail.com"></a><button type="submit" class="button">Submit</button>
             </form>
                 <label for="checkbox_page5" class="next">
-                    <i class="uil uil-angle-right"></i>
+                    <!-- <i class="uil uil-angle-right"></i> -->
                 </label>
         </div>
     </div>
-    <div class="back_cover"></div>
+    <div class="back_cover">
    </div> 
    <script>
     function stars() {
@@ -296,10 +299,10 @@
         document.body.appendChild(e);
         e.style.left = Math.random() * innerWidth + 'px';
 
-        let size = Math.random() * 3;
+        let size = Math.random() * 4;
         let duration = Math.random() * 3;
 
-        e.style.fontSize = 3 + size + 'px';
+        e.style.fontSize = 4 + size + 'px';
         e.style.animationDuration = 2 + duration + 's';
 
         setTimeout(function () {

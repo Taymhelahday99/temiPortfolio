@@ -99,6 +99,7 @@ body{
     position: absolute;
     max-width: 100%;
     top:-50px;
+    overflow-x: hidden;
     color: #fff;
     animation: animate 5s linear forwards;
     z-index: -50;
@@ -662,6 +663,9 @@ a{
     transform: rotateZ(135deg);
     top: -70%;
     left: -22%
+}
+.links {
+    margin-top: 10px;
 }
 
 .contact-form-container {

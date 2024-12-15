@@ -97,7 +97,7 @@ body{
 }
 .star{
     position: absolute;
-    max-width: 100vw;
+    max-width: 100%;
     top:-50px;
     color: #fff;
     animation: animate 5s linear forwards;
